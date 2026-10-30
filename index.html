@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#0b0a0d">
 <meta name="robots" content="noindex, nofollow">
 <title>Fil&amp;Soc Slides</title>
-<meta name="description" content="Apresentações prontas de Filosofia e Sociologia para projetar em sala.">
+<meta name="description" content="200 apresentações prontas e editáveis de Filosofia e Sociologia para projetar em sala.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap">
@@ -21,6 +21,7 @@
       <button type="button" data-filtro="Todos" aria-pressed="true">Todos</button>
       <button type="button" data-filtro="Filosofia" aria-pressed="false">Filosofia</button>
       <button type="button" data-filtro="Sociologia" aria-pressed="false">Sociologia</button>
+      <button type="button" data-filtro="Minhas" aria-pressed="false">Minhas</button>
     </div>
     <label class="busca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
       <input id="busca" type="search" placeholder="Pensador, conceito ou tema" aria-label="Buscar apresentações" autocomplete="off"></label>
@@ -32,6 +33,31 @@
   </section>
   <div id="catalogo"></div>
 </main>
+<footer class="rodape">
+  <div class="wrap">
+    <p><b>Suas edições ficam salvas neste navegador.</b> Para levar para outro computador, baixe um backup e importe lá.</p>
+    <div class="rodape-acoes">
+      <button type="button" class="btn btn--glass btn--peq" data-exportar>Baixar backup das edições</button>
+      <label class="btn btn--glass btn--peq">Importar backup<input type="file" accept="application/json,.json" data-importar hidden></label>
+      <button type="button" class="btn btn--glass btn--peq" data-creditos>Créditos das imagens</button>
+    </div>
+  </div>
+</footer>
+<div class="editor" id="editor" hidden>
+  <div class="ed-topo">
+    <button type="button" class="ed-voltar" data-ed-fechar aria-label="Fechar o editor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg><span>Concluir</span></button>
+    <div class="ed-tit"><small>Editando</small><b id="ed-nome"></b></div>
+    <span class="ed-status" id="ed-status" role="status">Salvo neste navegador</span>
+    <button type="button" class="btn btn--glass btn--peq" data-ed-pptx>Baixar PowerPoint</button>
+    <button type="button" class="btn btn--red btn--peq" data-ed-apresentar>Apresentar</button>
+  </div>
+  <div class="ed-corpo">
+    <aside class="ed-lista" id="ed-lista" aria-label="Slides"></aside>
+    <section class="ed-palco" aria-label="Prévia"><div class="quadro ed-quadro" id="ed-quadro"></div><p class="ed-dica">A prévia muda enquanto você digita. Textos longos diminuem sozinhos para caber no slide.</p></section>
+    <section class="ed-form" id="ed-form" aria-label="Conteúdo do slide"></section>
+  </div>
+</div>
+<div class="aviso" id="aviso" role="status" hidden></div>
 <div class="painel" id="painel" hidden></div>
 <div class="apresentador" id="apresentador" hidden>
   <div class="palco" id="ap-palco">

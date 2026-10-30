@@ -1,20 +1,17 @@
-# Fil&Soc Slides
+# Fil&Soc Slides — como publicar
 
-Plataforma de apresentações de Filosofia e Sociologia, no mesmo visual da Fil&Soc.
-Site estático: não precisa de instalação, banco de dados nem variáveis.
+1. Crie um repositório no GitHub e envie TODO o conteúdo desta pasta: `index.html`, `app.css`, `app.js`, `decks.js` e a pasta `imagens`.
+2. Na Vercel, importe o repositório (Framework: Other; sem comando de build). Pronto.
 
-## Publicar na Vercel
-1. Crie um repositório novo no GitHub (por exemplo `filsoc-slides`).
-2. Envie TODO o conteúdo desta pasta: `index.html`, `app.css`, `app.js`, `decks.js` e a pasta `imagens`.
-3. Na Vercel: Add New → Project → escolha o repositório → Framework "Other" → Deploy.
+## O que tem
+- 200 apresentações (100 de Filosofia e 100 de Sociologia), com 8 a 10 slides cada, organizadas por tema.
+- Imagem em todas as capas. As imagens vêm do Wikimedia Commons (domínio público ou licença livre) e são carregadas direto de lá; o crédito aparece na capa e no botão "Créditos das imagens".
 
-## Como usar
-- Clique em uma apresentação para ver todos os slides; "Apresentar" abre em tela cheia.
-- Setas do teclado, espaço ou clique nas laterais passam os slides. No celular, deslize o dedo.
-- G mostra todos os slides, N mostra a nota para o professor, F liga a tela cheia, Esc sai.
-- "Imprimir ou salvar em PDF" gera um slide por página.
+## Edição
+- Em qualquer apresentação: Editar. Dá para mudar textos, trocar a imagem (endereço ou arquivo do computador), mudar a ordem, duplicar, apagar e adicionar slides.
+- "Criar apresentação" começa uma do zero. "Duplicar apresentação" faz uma cópia para você mexer.
+- As edições ficam salvas no navegador de quem editou. Para levar para outro computador, use "Baixar backup das edições" no rodapé e "Importar backup" no outro.
+- "PowerPoint" baixa a apresentação em .pptx editável (abre no PowerPoint, Google Apresentações e Keynote). Os títulos usam a fonte Bebas Neue; se ela não estiver instalada, o programa troca por outra.
 
-## Editar ou criar apresentações
-Todo o conteúdo fica em `decks.js`. Copie uma apresentação inteira, troque o `slug` (sem acento e sem espaço)
-e os textos. Os tipos de slide estão explicados no começo do arquivo.
-Para usar uma imagem, coloque o arquivo .jpg em `imagens/` e escreva o nome dele em `img`.
+## Para mudar o conteúdo original para todo mundo
+Edite `decks.js`. Cada apresentação tem slug, disc, titulo, sub, tema, img, cred e slides.
